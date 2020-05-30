@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @SpringBootApplication来标注一个主程序类，说明这是一个springBoot应用
+ * 这个标签相当于：
+ * @SpringBootConfiguration
+ * @EnableAutoConfiguration
+ * @ComponentScan
+ * 三个配置
  */
 @SpringBootApplication
 public class Application {
