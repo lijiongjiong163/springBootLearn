@@ -8,16 +8,19 @@
         <outputRelativeToContentRoot value="true" />
         <module name="01_helloSB" />
         <module name="Annotation" />
+        <module name="hello" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01_helloSB" target="1.8" />
       <module name="Annotation" target="1.5" />
+      <module name="hello" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01_helloSB" options="-parameters" />
+      <module name="hello" options="-parameters" />
     </option>
   </component>
 </project>
