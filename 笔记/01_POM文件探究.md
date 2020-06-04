@@ -39,3 +39,7 @@
 spring-boot-starter：spring-Boot场景启动器，帮我们导入了某个场景正常运行所需要的依赖包。
 
 spring-boot将所有的功能场景都抽取出来，做成一个个的starters（启动器），只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器。
+
+
+
+# **有了这个功能，springBoot就帮我们干掉了POM中的一大堆依赖包**
