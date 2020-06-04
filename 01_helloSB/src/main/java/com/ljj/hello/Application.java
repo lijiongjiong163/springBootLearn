@@ -1,5 +1,6 @@
 package com.ljj.hello;
 
+import com.ljj.hello.domain.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
