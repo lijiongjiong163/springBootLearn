@@ -2,17 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="03_SB_web" />
+        <module name="hello" />
         <module name="01_helloSB" />
         <module name="Annotation" />
-        <module name="hello" />
+        <module name="02_SB_Logger" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01_helloSB" target="1.8" />
+      <module name="02_SB_Logger" target="1.8" />
+      <module name="03_SB_web" target="1.8" />
       <module name="Annotation" target="1.5" />
       <module name="hello" target="1.8" />
     </bytecodeTargetLevel>
@@ -20,6 +25,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01_helloSB" options="-parameters" />
+      <module name="02_SB_Logger" options="-parameters" />
+      <module name="03_SB_web" options="-parameters" />
       <module name="hello" options="-parameters" />
     </option>
   </component>
