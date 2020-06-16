@@ -14,7 +14,7 @@ import java.util.Date;
 
 /**
  * 后台传参的方法
- * @Slf4j  lombok标签，引入log对象
+ * @Slf4j  lombok标签，引入log对象,等于手写：private static final Logger log = LoggerFactory.getLogger(ArticleController.class);
  * @RequestMapping 有4个变种
  * @PathVariable 从路径（指url）中获取参数
  * @RequestBody 从请求体中获取参数(可以接受嵌套数据)
