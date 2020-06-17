@@ -27,3 +27,13 @@ public class ThymeleafProperties {
 只要把html文件放在classpath:/templates/路径下，就可以直接访问了
 ###3.语法
 
+1）属性
+
+​		th:text						修改标签体的内容
+
+​		th:utext					  不转义特殊字符
+
+​		th:任意html属性		修改这个属性
+
+
+
