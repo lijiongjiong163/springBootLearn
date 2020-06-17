@@ -1,5 +1,6 @@
 #thymeleaf
 ###1.引入
+
 ```xml
 <properties>
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
@@ -35,5 +36,5 @@ public class ThymeleafProperties {
 
 ​		th:任意html属性		修改这个属性
 
-
+![](assets/2018-02-04_123955.png)
 
