@@ -6,7 +6,19 @@
 </head>
 <body>
 <h1>成功！！！！！！</h1>
-<div>什么鬼啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+<div>什么鬼</div>
 <div  th:text="${name}">显示一个人名</div>
+<div  th:utext="${name}">显示一个人名</div>
+<hr/>
+<h4 th:text="${user}" th:each="user:${users}"></h4>
+<hr/>
+<h4>
+    <span th:each="user2:${users}">[[${user2}]]</span>
+</h4>
+<hr/>
+
+
+<h4>[(${name})]</h4>
+<h4>[[${name}]]</h4>
 </body>
 </html>
