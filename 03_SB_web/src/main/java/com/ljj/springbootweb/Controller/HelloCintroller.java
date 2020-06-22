@@ -1,16 +1,24 @@
 package com.ljj.springbootweb.Controller;
 
+import com.ljj.springbootweb.dao.EmployeeDao;
+import com.ljj.springbootweb.entities.Employee;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Map;
 
 @Controller
 public class HelloCintroller {
+    @Autowired
+    private EmployeeDao employeeDao;
 
         @RequestMapping("success")
     public String success(Map<String,Object> map){
@@ -37,5 +45,12 @@ public class HelloCintroller {
         //登录失败，将错误信息放在map中返回给前台
         map.put("msg","用户名或密码错误！");
         return "login";
+    }
+    @GetMapping("emps")
+    public String getAllEmps(Model model){
+        Collection<Employee> employees = employeeDao.getAll();
+        model.addAttribute("emps",employees);
+        //todo
+        return "emp/list";
     }
 }

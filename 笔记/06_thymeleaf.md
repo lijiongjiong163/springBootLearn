@@ -44,3 +44,18 @@ public class ThymeleafProperties {
 ```
 ###4.抽取公共代码(th:fragment)
 
+```html
+1、抽取公共片段
+<div th:fragment="copy">
+&copy; 2011 The Good Thymes Virtual Grocery
+</div>
+
+2、引入公共片段
+<div th:insert="~{footer :: copy}"></div>
+~{templatename::#selector}：模板名::选择器
+~{templatename::fragmentname}:模板名::片段名
+footer其实就是一个页面的名称
+selector就是这个要公用标签的id，引用的时候记得加#
+copy就是要这个要公用的代码段的th:fragment="copy"属性声明出来的
+```
+

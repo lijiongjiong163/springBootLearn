@@ -817,10 +817,9 @@ java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087  --serv
     扫描所有jar包类路径下  META-INF/spring.factories
     把扫描到的这些文件的内容包装成properties对象
     从properties中获取到EnableAutoConfiguration.class类（类名）对应的值，然后把他们添加在容器中
-
+    
     ```
 
-    
 
 **==将 类路径下  META-INF/spring.factories 里面配置的所有EnableAutoConfiguration的值加入到了容器中；==**
 
@@ -1718,8 +1717,6 @@ Spring Boot 自动配置好了SpringMVC
 
 - Custom `Favicon` support (see below).  favicon.ico
 
-  
-
 - 自动注册了 of `Converter`, `GenericConverter`, `Formatter` beans.
 
   - Converter：转换器；  public String hello(User user)：类型转换使用Converter
@@ -1742,8 +1739,6 @@ Spring Boot 自动配置好了SpringMVC
   - `HttpMessageConverters` 是从容器中确定；获取所有的HttpMessageConverter；
 
     ==自己给容器中添加HttpMessageConverter，只需要将自己的组件注册容器中（@Bean,@Component）==
-
-    
 
 - Automatic registration of `MessageCodesResolver` (see below).定义错误代码生成规则
 
@@ -2217,7 +2212,7 @@ URI：  /资源名称/资源标识       HTTP请求方式区分对资源CRUD操�
 
 2、引入公共片段
 <div th:insert="~{footer :: copy}"></div>
-~{templatename::selector}：模板名::选择器
+~{templatename::#selector}：模板名::选择器
 ~{templatename::fragmentname}:模板名::片段名
 
 3、默认效果：
