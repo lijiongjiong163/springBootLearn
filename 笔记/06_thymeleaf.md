@@ -37,4 +37,10 @@ public class ThymeleafProperties {
 ​		th:任意html属性		修改这个属性
 
 ![](assets/2018-02-04_123955.png)
+例如：
+```html
+<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+<!--只有th:if=后面的值为真的时候，这个标签才显示-->
+```
+###4.抽取公共代码(th:fragment)
 
