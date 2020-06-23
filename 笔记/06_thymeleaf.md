@@ -59,3 +59,49 @@ selector就是这个要公用标签的id，引用的时候记得加#
 copy就是要这个要公用的代码段的th:fragment="copy"属性声明出来的
 ```
 
+### 5.th:herf的相对路径和绝对路径
+
+访问了一个路径叫：
+
+```http
+http://localhost:8080/emp/1002
+```
+
+确实到了controller，也确实返回到了响应的view，但结果页面样式乱了，f12报找不到样式文件
+
+![image-20200623181933474](assets/image-20200623181933474.png)
+
+居然是拼成了项目路径+emp+webjars....
+
+后来发现是因为th:harf的相对路径和绝对路径问题，我的引入是这样写的
+
+```html
+<link th:href="@{webjars/bootstrap/4.5.0/dist/css/bootstrap.css}" rel="stylesheet">
+```
+
+地址前没加/，直接写地址的，这种写法就是相对路径的写法，以URL请求路径为根目录，webjars和1002同一级别，此时根路径为:
+
+```http
+http://localhost:8080/emp
+```
+
+拼接成
+
+```http
+http://localhost:8080/emp  +  webjars/bootstrap/4.5.0/dist/css/bootstrap.css
+```
+
+如果改成绝对路径：
+
+```html
+<link th:href="@{/webjars/bootstrap/4.5.0/dist/css/bootstrap.css}" rel="stylesheet">
+```
+
+就会以项目根目录去拼接：
+
+```http
+http://localhost:8080/webjars/bootstrap/4.5.0/dist/css/bootstrap.css
+```
+
+
+
