@@ -79,24 +79,30 @@
 									<td th:text="${#dates.format(emp.birth,'yyyy-MM-dd HH:mm')}">1,001</td>
 									<td>
 										<a class="btn btn-sm btn-primary" th:href="@{emp/}+${emp.id}">编辑</a>
-										<button class="btn btn-sm btn-danger">删除</button>
+<!--										想提交delete类型的请求必须用input，也就是必须有form表单，但是直接给button套个form的话会导致一个页面有好多表单，所以要使用js来实现-->
+										<button th:attr="del_uri=@{emp/}+${emp.id},duogeke='douhaogekai'"  class="btn btn-sm btn-danger deleteBtnlj" >删除</button>
+<!--										th:attr 自定义属性用 -->
 									</td>
 
 								</tr>
 							</tbody>
 						</table>
+
 					</div>
 				</main>
+				<form id="deleteEmpForm" method="post">
+					<input  type="hidden" name="_method" value="delete">
+				</form>
 			</div>
 		</div>
+
 
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="../../resources/asserts/js/jquery-3.2.1.slim.min.js" th:src="webjars/jquery/3.5.1/dist/jquery.slim.js"></script>
-		<script type="text/javascript" src="asserts/js/popper.min.js"></script>
-		<script type="text/javascript" src="../../resources/asserts/js/bootstrap.min.js" th:src="webjars/bootstrap/4.5.0/dist/js/bootstrap.js"></script>
-
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" ></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" ></script>
 		<!-- Icons -->
 		<script type="text/javascript" src="asserts/js/feather.min.js"></script>
 		<script>
@@ -134,7 +140,18 @@
 				}
 			});
 		</script>
-
+		<!--==========自己写的js=========-->
+		<script  type="text/javascript">
+			// 根据class拿到button对象，调用click方法，传入一个匿名方法
+			$(".deleteBtnlj").click(function () {
+				//我日,可以用this获取当前对象,我他妈以前写的都是垃圾,获取当前对象的del_uri属性
+				var del_uri=$(this).attr("del_uri");
+				//attr()方法都快忘了咋用了,唉
+				var a =$("#deleteEmpForm").attr("action",del_uri);
+				a.submit();
+				return false;
+			});
+		</script>
 	</body>
 
 </html>

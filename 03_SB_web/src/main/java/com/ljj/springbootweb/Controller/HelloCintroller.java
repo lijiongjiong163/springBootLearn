@@ -82,4 +82,15 @@ public class HelloCintroller {
         model.addAttribute("emp",employeeDao.get(id));
         return "emp/add";
     }
+    @PutMapping("emp")
+    public String updateEmp(Employee employee){
+        employeeDao.save(employee);
+        logger.info(employee.toString());
+        return "redirect:/emps";
+    }
+    @DeleteMapping("/emp/{id}")
+    public String deleteEmp(@PathVariable("id")Integer id){
+        employeeDao.delete(id);
+        return "redirect:/emps";
+    }
 }
