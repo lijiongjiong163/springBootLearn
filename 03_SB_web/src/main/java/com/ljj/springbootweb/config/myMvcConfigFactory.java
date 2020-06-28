@@ -21,7 +21,7 @@ public class myMvcConfigFactory {
     public WebMvcConfigurer myMvcConfigurer(){
         return new WebMvcConfigurer() {
             /**
-             * 给容器放入一个自定义视图映射器
+             * 给容器放入一个自定义视图映射器,映射url和html的关系
              *
              */
             @Override
