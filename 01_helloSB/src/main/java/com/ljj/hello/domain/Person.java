@@ -2,9 +2,11 @@ package com.ljj.hello.domain;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Min;
 import java.util.Map;
 
 /**
@@ -13,14 +15,18 @@ import java.util.Map;
  * prefix中必须全小写字母
  * 这个类中的属性必须有set方法
  *
+ * @PropertySource  从指定文件中取值
+ * @Validated jsr303校验
+ *
  */
 @Component
 @ConfigurationProperties(prefix = "person")
+@PropertySource(value = "classpath:person.properties",encoding = "utf-8")
 @Validated
 public class Person {
     //@Value("${person.name}")
     private String name;
-
+    @Min(21)
     private int age;
     private Map myMap;
     private String array;

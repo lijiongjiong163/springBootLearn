@@ -543,7 +543,9 @@ public class Person {
     private Dog dog;
 ```
 
+常用的数据校验标签
 
+![image-20200629141106566](assets/image-20200629141106566.png)
 
 #### 4、@PropertySource&@ImportResource&@Bean
 
@@ -734,7 +736,7 @@ springboot 启动会扫描以下位置的application.properties或者application
 
 SpringBoot会从这四个位置全部加载主配置文件；**互补配置**；
 
-
+![image-20200629145132573](assets/image-20200629145132573.png)
 
 ==我们还可以通过spring.config.location来改变默认的配置文件位置==
 

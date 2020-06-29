@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/02_SB_Logger/pom.xml" />
         <option value="$PROJECT_DIR$/03_SB_web/pom.xml" />
+        <option value="$PROJECT_DIR$/04_SB_Jdbc/pom.xml" />
       </list>
     </option>
   </component>

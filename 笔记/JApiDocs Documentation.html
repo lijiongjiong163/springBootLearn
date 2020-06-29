@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>JApiDocs Documentation</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="A magical api documentation generator without annotation for springboot.">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="./JApiDocs Documentation_files/vue.css">
+</head>
+<body data-page="zh-cn/README.md" class="ready sticky">
+<nav class="app-nav"><ul><li><p><a href="https://japidocs.agilestudio.cn/#/">首页</a></p></li><li><p><a href="https://japidocs.agilestudio.cn/#/support">支持</a></p></li><li><p><a href="https://japidocs.agilestudio.cn/#/contact">联系</a></p></li><li><p>语言</p><ul><li><a href="https://japidocs.agilestudio.cn/#/">English</a></li><li><a href="https://japidocs.agilestudio.cn/#/zh-cn/" class="active">中文</a></li></ul></li></ul></nav><a href="https://github.com/YeDaxia/JApiDocs" target="_blank" class="github-corner" aria-label="View source on Github"><svg viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><section class="cover show" style="background: linear-gradient(to left bottom, hsl(238, 100%, 85%) 0%,hsl(135, 100%, 85%) 100%)"><div class="cover-main"><h1 id="japidocs-14"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=japidocs-14" data-id="japidocs-14" class="anchor"><span>JApiDocs <small>1.4</small></span></a></h1><blockquote>
+<p>无需额外注解的 SpringBoot API文档生成工具</p></blockquote>
+<ul><li>5分钟轻松掌握</li></ul><p><a href="https://japidocs.agilestudio.cn/demo-zh/V2.0/index.html" target="_blank" rel="noopener">示例</a>
+<a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%85%a5%e9%97%a8">快速使用</a></p></div><div class="mask"></div></section><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href="https://japidocs.agilestudio.cn/">JApiDocs</a></h1><div class="sidebar-nav"><ul><li class=""><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%85%a5%e9%97%a8">入门</a></li><ul><li class="active"><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b">快速开始</a></li><ul><li class=""><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%b8%80%e6%ad%a5%ef%bc%9a%e6%b7%bb%e5%8a%a0%e4%be%9d%e8%b5%96">第一步：添加依赖</a></li><li class=""><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%ba%8c%e6%ad%a5%ef%bc%9a%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0">第二步：配置参数</a></li></ul><li class=""><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83">编码规范</a></li><ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=_1-%e6%b7%bb%e5%8a%a0%e5%bf%85%e8%a6%81%e7%9a%84%e4%bb%a3%e7%a0%81%e6%b3%a8%e9%87%8a">1. 添加必要的代码注释</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=_2-%e6%8e%a5%e5%8f%a3%e5%a3%b0%e6%98%8e%e8%bf%94%e5%9b%9e%e5%af%b9%e8%b1%a1">2. 接口声明返回对象</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=_3-%e6%8e%a5%e5%8f%a3%e5%af%b9%e8%b1%a1%e5%9c%a8%e6%ba%90%e7%a0%81%e4%b8%ad">3. 接口对象在源码中</a></li></ul></ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e9%ab%98%e7%ba%a7%e9%85%8d%e7%bd%ae">高级配置</a></li><ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=apidoc">@ApiDoc</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=ignore">@Ignore</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%af%bc%e5%87%ba%e6%9b%b4%e5%a4%9a%e6%a0%bc%e5%bc%8f">导出更多格式</a></li><ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%af%bc%e5%87%bamarkdown">导出markdown</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%af%bc%e5%87%ba-pdf-%e6%88%96%e8%80%85-word">导出 pdf 或者 word</a></li></ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e8%87%aa%e5%ae%9a%e4%b9%89%e4%bb%a3%e7%a0%81%e6%a8%a1%e6%9d%bf">自定义代码模板</a></li><ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%b8%80%e6%ad%a5%ef%bc%9a%e5%ae%9a%e4%b9%89%e4%bb%a3%e7%a0%81%e6%a8%a1%e6%9d%bf">第一步：定义代码模板</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%ba%8c%e6%ad%a5%ef%bc%9a%e9%80%89%e6%8b%a9%e6%96%b0%e7%9a%84%e6%a8%a1%e6%9d%bf">第二步：选择新的模板</a></li></ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e6%b7%bb%e5%8a%a0%e6%9b%b4%e5%a4%9a%e5%8a%9f%e8%83%bd">添加更多功能</a></li><ul><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%b8%80%e6%ad%a5%ef%bc%9a%e5%ae%9e%e7%8e%b0-ipluginsupport-%e6%8e%a5%e5%8f%a3">第一步：实现 IPluginSupport 接口</a></li><li><a class="section-link" href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%ba%8c%e6%ad%a5%ef%bc%9a%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6">第二步：添加插件</a></li></ul></ul></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="入门"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%85%a5%e9%97%a8" data-id="入门" class="anchor"><span>入门</span></a></h1><p>支持JDK：1.8+</p><h2 id="快速开始"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" data-id="快速开始" class="anchor"><span>快速开始</span></a></h2><h3 id="第一步：添加依赖"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%b8%80%e6%ad%a5%ef%bc%9a%e6%b7%bb%e5%8a%a0%e4%be%9d%e8%b5%96" data-id="第一步：添加依赖" class="anchor"><span>第一步：添加依赖</span></a></h3><p>maven:</p><pre v-pre="" data-lang=""><code class="lang-"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.github.yedaxia<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>japidocs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span></code></pre><p>gradle:</p><pre v-pre="" data-lang=""><code class="lang-">compile 'io.github.yedaxia:japidocs:1.4'</code></pre><h3 id="第二步：配置参数"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%ba%8c%e6%ad%a5%ef%bc%9a%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" data-id="第二步：配置参数" class="anchor"><span>第二步：配置参数</span></a></h3><p>你可以在任意一个main入口运行下面的代码：</p><pre v-pre="" data-lang="java"><code class="lang-java">DocsConfig config = new DocsConfig();
+config.setProjectPath("your springboot project path"); // 项目根目录
+config.setProjectName("ProjectName"); // 项目名称
+config.setApiVersion("V1.0");       // 声明该API的版本
+config.setDocsPath("your api docs path"); // 生成API 文档所在目录
+config.setAutoGenerate(Boolean.TRUE);  // 配置自动生成
+Docs.buildHtmlDocs(config); // 执行生成文档</code></pre><p>如果没有意外，执行完上面的代码后，你就可以在配置的目录中看到生成的文档了。</p><h2 id="编码规范"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83" data-id="编码规范" class="anchor"><span>编码规范</span></a></h2><p>JApiDocs是通过解析Java源码来实现的，要使得JApiDocs正确工作，需要你在项目中的<code>Controller</code>书写遵循一定的编码规范。</p><p>你可以结合源码中 <code>SpringDemo</code> 这个模块来对照理解。</p><h3 id="_1-添加必要的代码注释"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=_1-%e6%b7%bb%e5%8a%a0%e5%bf%85%e8%a6%81%e7%9a%84%e4%bb%a3%e7%a0%81%e6%b3%a8%e9%87%8a" data-id="_1-添加必要的代码注释" class="anchor"><span>1. 添加必要的代码注释</span></a></h3><p>其中类注释会对应到一级接口分组，你也可以通过<code>@description</code>来指定分组名称；JApiDocs 会通过 <code>@param</code> 来寻找接口参数和进一步解析参数的内容。</p><pre v-pre="" data-lang="java"><code class="lang-java">/**
+ * 用户接口
+ */
+@RequestMapping("/api/user/")
+@RestController
+public class UserController {
+
+
+    /**
+     * 用户列表
+     * @param listForm
+     */
+    @RequestMapping(path = "list", method = {RequestMethod.GET,  RequestMethod.POST}  )
+    public ApiResult&lt;PageResult<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserVO</span><span class="token punctuation">&gt;</span></span>&gt; list(UserListForm listForm){
+        return null;
+    }
+
+    /**
+     * 保存用户
+     * @param userForm
+     */
+    @PostMapping(path = "save")
+    public ApiResult<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserVO</span><span class="token punctuation">&gt;</span></span> saveUser(@RequestBody UserForm userForm){
+        return null;
+    }
+
+    /**
+     * 删除用户
+     * @param userId 用户ID
+     */
+    @PostMapping("delete")
+    public ApiResult deleteUser(@RequestParam Long userId){
+        return null;
+    }
+}</code></pre><p>如果提交的表单是 <code>application/x-www-form-urlencoded</code> 类型的<code>key/value</code>格式，你可以在 SpringBoot 端通过在 <code>@param</code> 参数后添加字段解释或者在相关的JavaBean对象里面添加解释：</p><pre v-pre="" data-lang="java"><code class="lang-java">// 直接在java的 @param 注解中
+@param userId 用户ID</code></pre><pre v-pre="" data-lang="java"><code class="lang-java">// 在FormBean对象中
+public class UserListForm extends PageForm{
+    private Integer status; //用户状态
+    private String name; //用户名
+}</code></pre><p>这种格式对于到文档中的参数描述将是表格的形式：</p><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>status</td>
+<td>int</td>
+<td>否</td>
+<td>用户状态</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>否</td>
+<td>用户名</td>
+</tr>
+</tbody></table>
+<p>如果提交的表单是 <code>application/json</code> 类型的<code>json</code>数据格式，对应 SpringBoot 中的 <code>@RequestBody</code> 注解，在文档中则是 <code>json</code> 格式显示：</p><pre v-pre="" data-lang="java"><code class="lang-java">{
+  "id": "long //用户ID",
+  "name": "string //用户名",
+  "phone": "long //电话",
+  "avatar": "string //头像",
+  "gender": "byte //性别"
+}</code></pre><h3 id="_2-接口声明返回对象"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=_2-%e6%8e%a5%e5%8f%a3%e5%a3%b0%e6%98%8e%e8%bf%94%e5%9b%9e%e5%af%b9%e8%b1%a1" data-id="_2-接口声明返回对象" class="anchor"><span>2. 接口声明返回对象</span></a></h3><p>我们知道，如果<code>Controller</code>声明了<code>@RestController</code>，SpringBoot会把返回的对象直接序列成Json数据格式返回给前端。
+JApiDocs也利用了这一特性来解析接口返回的结果，但由于JApiDocs是静态解析源码的，因此你要明确指出返回对象的类型信息，JApiDocs支持继承、泛型、循环嵌套等复杂的类解析。</p><p>比如上面的<code>saveUser</code>接口：</p><pre v-pre="" data-lang="java"><code class="lang-java"> /**
+ * 保存用户
+ * @param userForm
+ */
+@PostMapping(path = "save")
+public ApiResult<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserVO</span><span class="token punctuation">&gt;</span></span> saveUser(@RequestBody UserForm userForm){
+    return null;
+}</code></pre><p><code>ApiResult&lt;UserVO&gt;</code>表明了该接口返回的数据结构，经过JApiDocs处理后是这样的：</p><pre v-pre="" data-lang="json"><code class="lang-json">{
+  "code": "int",
+  "errMsg": "string",
+  "data": {
+    "userId": "string //用户id",
+    "userName": "string //用户名",
+    "friends": [
+      {
+        "userId": "string //用户id",
+        "userName": "string //用户名"
+      }
+    ],
+    "readBooks": [
+      {
+        "bookId": "long //图书id",
+        "bookName": "string //图书名称"
+      }
+    ],
+    "isFollow": "boolean //是否关注"
+  }
+}</code></pre><p>如果你不是通过返回对象的形式，你也可以通过JApiDocs提供的<code>@ApiDoc</code>注解来声明返回类型，你可以参考<code>@ApiDoc</code>章节的相关配置内容。</p><h3 id="_3-接口对象在源码中"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=_3-%e6%8e%a5%e5%8f%a3%e5%af%b9%e8%b1%a1%e5%9c%a8%e6%ba%90%e7%a0%81%e4%b8%ad" data-id="_3-接口对象在源码中" class="anchor"><span>3. 接口对象在源码中</span></a></h3><p>我们知道，经过编译后的 class 字节码中是没有注释信息的，如果要通过反射字节码的方式来实现，则不可避免要引入运行时注解，这样会增加使用成本，
+考虑到这一点，JApiDocs 从第二个版本之后就改成了使用解析源码的方式，而不是反射字节码的思路来实现了，但这样直接导致的缺陷就是：
+所有的 Form Bean (表单)对象和返回对象就必须在项目的源码中，否则就无法解析了，如果你们项目的JavaBean对象是通过jar包的形式提供的，
+那很遗憾，JApiDocs将无法支持。</p><h1 id="高级配置"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e9%ab%98%e7%ba%a7%e9%85%8d%e7%bd%ae" data-id="高级配置" class="anchor"><span>高级配置</span></a></h1><h2 id="apidoc"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=apidoc" data-id="apidoc" class="anchor"><span>@ApiDoc</span></a></h2><p>JApiDocs 默认只导出声明了<code>@ApiDoc</code>的接口，我们前面通过设置 <code>config.setAutoGenerate(Boolean.TRUE)</code> 来解除了这个限制。</p><p>如果你不希望把所有的接口都导出，你可以把<code>autoGenerate</code>设置关闭，在相关<code>Controller</code>类或者接口方法上通过添加<code>@ApiDoc</code>来确定哪些接口需要导出。</p><p>当<code>@ApiDoc</code>声明在接口方法上的时候，它还拥有一些更灵活的设置，下面我们来看一下：</p><ul><li>result: 这个可以直接声明返回的对象类型，如果你声明了，将会覆盖SpringBoot的返回对象</li><li>url: 请求URL，扩展字段，用于支持非SpringBoot项目</li><li>method: 请求方法，扩展字段，用于支持非SpringBoot项目</li></ul><p>例子：</p><pre v-pre="" data-lang="java"><code class="lang-java">@ApiDoc(result = AdminVO.class, url = "/api/v1/admin/login2", method = "post")</code></pre><h2 id="ignore"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=ignore" data-id="ignore" class="anchor"><span>@Ignore</span></a></h2><p> 如果你不想导出对象里面的某个字段，可以给这个字段加上<code>@Ignore</code>注解，这样JApiDocs导出文档的时候就会自动忽略掉了：</p><p>例子:</p><pre v-pre="" data-lang="java"><code class="lang-java">public class UserForm{
+    @Ignore
+    private Byte gender; //性别
+}</code></pre><h2 id="导出更多格式"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%af%bc%e5%87%ba%e6%9b%b4%e5%a4%9a%e6%a0%bc%e5%bc%8f" data-id="导出更多格式" class="anchor"><span>导出更多格式</span></a></h2><h3 id="导出markdown"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%af%bc%e5%87%bamarkdown" data-id="导出markdown" class="anchor"><span>导出markdown</span></a></h3><pre v-pre="" data-lang="java"><code class="lang-java">config.addPlugin(new MarkdownDocPlugin());</code></pre><h3 id="导出-pdf-或者-word"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e5%af%bc%e5%87%ba-pdf-%e6%88%96%e8%80%85-word" data-id="导出-pdf-或者-word" class="anchor"><span>导出 pdf 或者 word</span></a></h3><p>你可以通过 <a href="https://pandoc.org/" target="_blank" rel="noopener">pandoc</a> 把 markdown 格式转成 pdf 或者 word 格式。</p><h2 id="自定义代码模板"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e8%87%aa%e5%ae%9a%e4%b9%89%e4%bb%a3%e7%a0%81%e6%a8%a1%e6%9d%bf" data-id="自定义代码模板" class="anchor"><span>自定义代码模板</span></a></h2><p>JApiDocs 除了支持文档导出，目前也支持生成了 Android 和 iOS 的返回对象代码，对应 Java 和 Object-C 语言，
+如果你想修改代码模板，可以通过以下的方法：</p><h3 id="第一步：定义代码模板"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%b8%80%e6%ad%a5%ef%bc%9a%e5%ae%9a%e4%b9%89%e4%bb%a3%e7%a0%81%e6%a8%a1%e6%9d%bf" data-id="第一步：定义代码模板" class="anchor"><span>第一步：定义代码模板</span></a></h3><p>把源码中<code>library</code>项目<code>resources</code>目录下的代码模板拷贝一份，其中，<code>IOS_</code>表示 Object-C 代码模板，<code>JAVA_</code>开头表示 Java代码，
+模板中类似<code>${CLASS_NAME}</code>的符号是替换变量，具体含义你可以结合生成的代码进行理解，然后按照你想要的代码模板进行修改即可。</p><h3 id="第二步：选择新的模板"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%ba%8c%e6%ad%a5%ef%bc%9a%e9%80%89%e6%8b%a9%e6%96%b0%e7%9a%84%e6%a8%a1%e6%9d%bf" data-id="第二步：选择新的模板" class="anchor"><span>第二步：选择新的模板</span></a></h3><p>通过<code>DocsConfig</code>配置模板路径替换成新的模板：</p><pre v-pre="" data-lang="java"><code class="lang-java">docsConfig.setCodeTplPath("模板路径");</code></pre><h2 id="添加更多功能"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e6%b7%bb%e5%8a%a0%e6%9b%b4%e5%a4%9a%e5%8a%9f%e8%83%bd" data-id="添加更多功能" class="anchor"><span>添加更多功能</span></a></h2><p>JApiDocs 提供了插件接口，你可以通过插件接口来实现更多丰富的功能，下面介绍如何添加插件：</p><h3 id="第一步：实现-ipluginsupport-接口"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%b8%80%e6%ad%a5%ef%bc%9a%e5%ae%9e%e7%8e%b0-ipluginsupport-%e6%8e%a5%e5%8f%a3" data-id="第一步：实现-ipluginsupport-接口" class="anchor"><span>第一步：实现 IPluginSupport 接口</span></a></h3><pre v-pre="" data-lang="java"><code class="lang-java">public class CustomPlugin implements IPluginSupport{
+
+    @Override
+    public void execute(List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ControllerNode</span><span class="token punctuation">&gt;</span></span> controllerNodeList){
+        // 实现你自己的功能需求
+    }
+}</code></pre><h3 id="第二步：添加插件"><a href="https://japidocs.agilestudio.cn/#/zh-cn/?id=%e7%ac%ac%e4%ba%8c%e6%ad%a5%ef%bc%9a%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6" data-id="第二步：添加插件" class="anchor"><span>第二步：添加插件</span></a></h3><pre v-pre="" data-lang="java"><code class="lang-java"> config.addPlugin(new CustomPlugin());</code></pre></article></section></main>
+<script>
+    window.$docsify = {
+      coverpage: ['/', '/zh-cn/'],
+      loadNavbar: true,
+      name: 'JApiDocs',
+      repo: 'https://github.com/YeDaxia/JApiDocs'
+    }
+  </script>
+<script src="./JApiDocs Documentation_files/docsify.min.js.下载"></script>
+
+
+<div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AjaxResponse</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
+<link href="../style.css" rel="stylesheet" />
+</head>
+<body onload="PR.prettyPrint()">
+<pre class="prettyprint lang-java">
+public class AjaxResponse implements Serializable{
+
+    private boolean isok; //
+    private int code; //200、400、500
+    private String message; //
+    private Article data; //
+
+    public boolean getIsok(){
+        return isok;
+    }
+
+    public void setIsok(boolean isok){
+        this.isok = isok;
+    }
+
+    public int getCode(){
+        return code;
+    }
+
+    public void setCode(int code){
+        this.code = code;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+    public Article getData(){
+        return data;
+    }
+
+    public void setData(Article data){
+        this.data = data;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class Article implements Serializable{
+
+    private int id; //
+    private String title; //
+    private String content; //
+    private String author; //
+    private String creatTime; //
+    private Reader[] readers; //
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public String getContent(){
+        return content;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
+    public String getAuthor(){
+        return author;
+    }
+
+    public void setAuthor(String author){
+        this.author = author;
+    }
+
+    public String getCreatTime(){
+        return creatTime;
+    }
+
+    public void setCreatTime(String creatTime){
+        this.creatTime = creatTime;
+    }
+
+    public Reader[] getReaders(){
+        return readers;
+    }
+
+    public void setReaders(Reader[] readers){
+        this.readers = readers;
+    }
+
+}
+</pre>
+
+
+<pre class="prettyprint lang-java">
+public class Reader implements Serializable{
+
+    private String name; //读者名称
+    private int age; //读者年龄
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+}
+</pre>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.js"></script>
+</body>
+</html>

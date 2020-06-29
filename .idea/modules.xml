@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/01_helloSB/01_helloSB.iml" filepath="$PROJECT_DIR$/01_helloSB/01_helloSB.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_SB_Logger/02_SB_Logger.iml" filepath="$PROJECT_DIR$/02_SB_Logger/02_SB_Logger.iml" />
       <module fileurl="file://$PROJECT_DIR$/03_SB_web/03_SB_web.iml" filepath="$PROJECT_DIR$/03_SB_web/03_SB_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_SB_Jdbc/04_SB_Jdbc.iml" filepath="$PROJECT_DIR$/04_SB_Jdbc/04_SB_Jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/Annotation/Annotation.iml" filepath="$PROJECT_DIR$/Annotation/Annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/01_helloSB/hello.iml" filepath="$PROJECT_DIR$/01_helloSB/hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/笔记/笔记.iml" filepath="$PROJECT_DIR$/笔记/笔记.iml" />
