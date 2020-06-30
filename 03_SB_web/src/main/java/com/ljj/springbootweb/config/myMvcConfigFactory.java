@@ -30,6 +30,10 @@ public class myMvcConfigFactory {
                 registry.addViewController("/main.html").setViewName("dashboard");
             }
 
+            /**
+             * 添加一个拦截器
+             * @param registry
+             */
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 //也可以不写下面的loginHandlerInterceptor方法，直接在这new匿名对象就行了
@@ -52,7 +56,10 @@ public class myMvcConfigFactory {
         return new MyLocaleResolver();
     }
 
-
+    /**
+     * 自定义拦截器
+     * @return
+     */
     public HandlerInterceptor loginHandlerInterceptor(){
         return new HandlerInterceptor() {
             @Override

@@ -10,10 +10,11 @@ import javax.validation.constraints.Min;
 import java.util.Map;
 
 /**
- * @ConfigurationProperties(prefix = "person")  从全局配置文件中取值
+ * @ConfigurationProperties(prefix = "person")  从全局配置文件中取值，这个标签可以在类上，给类中的变量赋值，也可以给一个方法，就给该方法返回的对象中的的变量赋值
  * 这个类必须要加载到spring容器中
- * prefix中必须全小写字母
+ * prefix中必须全小写字母，需要驼峰的话可以用_隔开
  * 这个类中的属性必须有set方法
+ *
  *
  * @PropertySource  从指定文件中取值
  * @Validated jsr303校验

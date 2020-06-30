@@ -80,7 +80,7 @@ public AjaxResponse<Article> getArticle(@PathVariable("id") int id){
                                        @RequestParam  String author,
                                        @DateTimeFormat(pattern = "yyyy-mm-dd HH:mm:ss")
                                            @RequestParam  Date creatTime
-                                       //这两个标签可以同时使用，但是japidocs看到RequestBody就把这个请求当成json去生成文档了
+                                       //这两个标签可以同时使用，但是japidocs看到RequestBody就把这个请求当成json去生成文档
                                    //    @RequestBody Article article
                                        ){
 
