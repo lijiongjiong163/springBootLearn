@@ -15,14 +15,14 @@ class articleDaoTest {
     private articleDao articleDao;
     @Test
     void addArticle() {
-        articleDao.addArticle(new Article().builder()
+        /*articleDao.addArticle(new Article().builder()
                 .author("罗贯中")
                 .id(1)
                 .title("三国")
                 .content("content")
-                .creatTime(new Date())
+                .createTime(new Date())
                 .readers(Collections.emptyList())
-                .build());
+                .build());*/
 
     }
 }

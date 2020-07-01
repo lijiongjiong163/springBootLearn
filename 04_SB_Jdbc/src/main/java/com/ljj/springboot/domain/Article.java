@@ -27,13 +27,13 @@ import java.util.List;
 @JsonPropertyOrder({"creatTime","title"})
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Article {
-    @JsonIgnore
-    private int id;
-    private String title;
-    private String content;
+    //@JsonIgnore
+    private int id;  //用户id
+    private String title;   //书名
+    private String content; //目录
     @JsonProperty("作者")
-    private String author;
-    @JsonFormat(pattern = "yyyy/MM/dd-HH:m:ss")
-    private Date creatTime;
-    private List<Reader> readers;
+    private String author;  //作者
+    @JsonFormat(pattern = "yyyy/MM/dd")
+    private Date createTime;            //日期
+    private List<Reader> readers;   //读者
 }
