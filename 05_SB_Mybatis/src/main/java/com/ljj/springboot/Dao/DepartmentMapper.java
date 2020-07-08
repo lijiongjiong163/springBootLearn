@@ -11,11 +11,12 @@ public interface DepartmentMapper {
 
     @Delete("delete from department where id=#{id}")
     public int deleteDeptById(Integer id);
-
+    //将主键返回给对象
     @Options(useGeneratedKeys = true,keyProperty = "id")
+    //@Insert("insert into department(departmentName) values(#{departmentName})")   错误！写sql的时候还是要跟人家数据库字段名一致，这驼峰转换可管不了
     @Insert("insert into department(department_name) values(#{departmentName})")
     public int insertDept(Department department);
-
-    @Update("update department set departmentName=#{departmentName} where id=#{id}")
+    //@Update("update department set department_name=#{departmentName} where id=#{id}")
+    @Update("update department set department_name=#{departmentName} where id=#{id}")
     public int updateDept(Department department);
 }

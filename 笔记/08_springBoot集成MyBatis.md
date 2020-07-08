@@ -32,6 +32,49 @@
 ![](assets/搜狗截图20180305194443.png)
 
 ## 2.2注解版
+#### 2.2.1 开启驼峰转换
+在application.yml中加入
+```yaml
+#开启下划线驼峰转换（坑：只是说从数据库查出来的结果，下划线可以转成javabean中的驼峰格式，并不是说你写sql去数据库查时可以写成驼峰，错误示例见com.ljj.springboot.Dao.DepartmentMapper的insertDept方法）
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+```
+#### 2.2.2 (可选)加@MapperScan
+```java
+@MapperScan("com.ljj.springboot.Dao")
+@SpringBootApplication
+public class DemoApplication {
 
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
+}
+```
+#### 2.2.3直接写Dao就完事了（mapper）
+```java
+package com.ljj.springboot.Dao;
+
+import com.ljj.springboot.domain.Department;
+import org.apache.ibatis.annotations.*;
+//指定这是一个操作数据库的mapper,如果mapper多了会很麻烦，可以用@mapperScan标注在程序入口处，这样就能将指定包中的mapper都扫描到啦
+//@Mapper
+public interface DepartmentMapper {
+
+    @Select("select * from department where id=#{id}")
+    public Department getDeptById(Integer id);
+
+    @Delete("delete from department where id=#{id}")
+    public int deleteDeptById(Integer id);
+    
+    @Options(useGeneratedKeys = true,keyProperty = "id")
+    //@Insert("insert into department(departmentName) values(#{departmentName})")   错误！写sql的时候还是要跟人家数据库字段名一致，这驼峰转换可管不了
+    @Insert("insert into department(department_name) values(#{departmentName})")
+    public int insertDept(Department department);
+    //@Update("update department set department_name=#{departmentName} where id=#{id}")
+    @Update("update department set department_name=#{departmentName} where id=#{id}")
+    public int updateDept(Department department);
+}
+```
 

@@ -4,6 +4,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+#开启下划线驼峰转换（坑：只是说从数据库查出来的结果，下划线可以转成javabean中的驼峰格式，并不是说你写sql去数据库查时可以写成驼峰，错误示例见com.ljj.springboot.Dao.DepartmentMapper的insertDept方法）
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
