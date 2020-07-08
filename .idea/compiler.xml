@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="02_SB_Logger" />
         <module name="01_helloSB" />
         <module name="Annotation" />
-        <module name="02_SB_Logger" />
+        <module name="hello" />
+        <module name="05_SB_Mybatis" />
         <module name="04_SB_Jdbc" />
         <module name="03_SB_web" />
-        <module name="hello" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="02_SB_Logger" target="1.8" />
       <module name="03_SB_web" target="1.8" />
       <module name="04_SB_Jdbc" target="1.8" />
+      <module name="05_SB_Mybatis" target="1.8" />
       <module name="Annotation" target="1.5" />
       <module name="hello" target="1.8" />
     </bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="02_SB_Logger" options="-parameters" />
       <module name="03_SB_web" options="-parameters" />
       <module name="04_SB_Jdbc" options="-parameters" />
+      <module name="05_SB_Mybatis" options="-parameters" />
       <module name="hello" options="-parameters" />
     </option>
   </component>

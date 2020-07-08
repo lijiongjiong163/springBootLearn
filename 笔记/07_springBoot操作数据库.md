@@ -1,8 +1,6 @@
 **适用于 04_SB_Jdbc；**
 
-### 1.spring JDBC
-
-1.引入依赖
+### 1.spring JDBC引入依赖
 
 ```xml
         <dependency>
