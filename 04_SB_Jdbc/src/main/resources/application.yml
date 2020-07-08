@@ -16,4 +16,30 @@ spring:
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
 
+#Atomikos双数据源
+firstdb:
+  uniqueResourceName: firstdbname
+  xaDataSourceClassName: com.mysql.cj.jdbc.MysqlXADataSource
+  xaProperties:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&&useSSL=true&serverTimezone=UTC
+    user: root
+    password: 123456
+  exclusiveConnectionMode: true
+  minPoolSize: 3
+  maxPoolSize: 10
+  testQuery: select 1 from dual
+seconddb:
+  uniqueResourceName: seconddbname
+  xaDataSourceClassName: com.mysql.cj.jdbc.MysqlXADataSource
+  xaProperties:
+    url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&&useSSL=true&serverTimezone=UTC
+    user: root
+    password: 123456
+  exclusiveConnectionMode: true
+  minPoolSize: 3
+  maxPoolSize: 10
+  testQuery: select 1 from dual
+
+
+
 

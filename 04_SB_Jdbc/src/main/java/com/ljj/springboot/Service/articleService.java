@@ -19,12 +19,17 @@ public class articleService {
     @Resource
     private JdbcTemplate secondJdbcTemplate;
 
-    @Transactional
+    /**
+     * @Transactional    数据库事务不能跨链接，也不能跨数据源，更不能跨库，像这种跨库的操作叫做分布式事务
+     * @param article
+     */
+    @Transactional      //这玩意只能控制同一数据源的数据事务，如果同时操作两个数据库，那就有一个数据库没控制住
     public void addArticle(Article article){
         if(article.getId()!=0)
-            articleDao.addArticle(article,secondJdbcTemplate);
             articleDao.addArticle(article,firstJdbcTemplate);
+            articleDao.addArticle(article,secondJdbcTemplate);
 
+            //int i =10/0;
 
     }
     public void updateArticle(Article article){

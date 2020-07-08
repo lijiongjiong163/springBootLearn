@@ -1,5 +1,6 @@
 package com.ljj.springboot.tools;
 
+import com.atomikos.jdbc.AtomikosDataSourceBean;
 import com.ljj.springboot.domain.Reader;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -13,7 +14,9 @@ import javax.sql.DataSource;
 
 /**
  * @Primary 如果容器有多个同类型的bean，autowired会优先选择带@Primary标签的bean
- *
+ * @ConfigurationProperties(prefix = "spring.datasource.one")两种用法：
+ *      1.用再类上，直接给成员变量赋值
+ *      2.用在方法上，给方法的返回值赋值
  *
  * spring知识回顾：
  *      当使用注解配置的方式时（@Configuration），如果这个方法有参数，spring容器会自动去容器中找有没有可用的这个形参的bean对象。
@@ -28,7 +31,8 @@ import javax.sql.DataSource;
  */
 @Configuration
 public class DataSourceConfig {
-    @Primary
+    //普通的双数据源
+    //@Primary
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.one")
     public DataSource firstDataSource(){
@@ -39,12 +43,25 @@ public class DataSourceConfig {
     public DataSource secondDataSource(){
         return DataSourceBuilder.create().build();
     }
+
+    //XA规范的双数据源
+    @Primary
     @Bean
-    public JdbcTemplate firstJdbcTemplate(@Qualifier("firstDataSource") DataSource dataSource){
+    @ConfigurationProperties(prefix = "firstdb")
+    public DataSource firstXADataSource(){
+        return new AtomikosDataSourceBean();
+    }
+    @Bean
+    @ConfigurationProperties(prefix = "seconddb")
+    public DataSource secondXADataSource(){
+        return new AtomikosDataSourceBean();
+    }
+    @Bean
+    public JdbcTemplate firstJdbcTemplate(@Qualifier("firstXADataSource") DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }
     @Bean
-    public JdbcTemplate secondJdbcTemplate(@Qualifier("secondDataSource") DataSource dataSource){
+    public JdbcTemplate secondJdbcTemplate(@Qualifier("secondXADataSource") DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }
 

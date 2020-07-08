@@ -51,14 +51,14 @@ public class articleDao {
     public Article findArticle(int id,JdbcTemplate jdbcTemplate){
         if(jdbcTemplate==null)
             jdbcTemplate=firstJdbcTemplate;
-        return jdbcTemplate.queryForObject("select * from Article where id=?", new Object[]{id}, new BeanPropertyRowMapper<Article>());
+        return jdbcTemplate.queryForObject("select * from Article where id=?", new Object[]{id}, new BeanPropertyRowMapper<Article>(Article.class));
 
     }
     //查多条记录
     public List<Article> findAll(JdbcTemplate jdbcTemplate){
         if(jdbcTemplate==null)
             jdbcTemplate=firstJdbcTemplate;
-        return jdbcTemplate.query("select * from article",new BeanPropertyRowMapper<>(Article.class));
+        return jdbcTemplate.query("select * from article",new BeanPropertyRowMapper<Article>(Article.class));
     }
 
 }
