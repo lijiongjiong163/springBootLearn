@@ -2,6 +2,8 @@ package com.ljj.springboot.Dao;
 
 import com.ljj.springboot.domain.Department;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
+
 //指定这是一个操作数据库的mapper,如果mapper多了会很麻烦，可以用@mapperScan标注在程序入口处，这样就能将指定包中的mapper都扫描到啦
 //@Mapper
 public interface DepartmentMapper {

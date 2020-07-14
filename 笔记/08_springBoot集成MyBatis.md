@@ -77,4 +77,16 @@ public interface DepartmentMapper {
     public int updateDept(Department department);
 }
 ```
+## 2.3配置版
+#### 2.3.1在主配置文件中写扫描mapper.xml路径
+```yaml
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+```
+**注意：这个配置和@mapper（或@mapperScan）都需要，@mapper是负责将dao的接口标记成mapper，而配置文件中配的是扫描xml文件的配置**
+#### 2.3.2用mybatis-generate生产代码就完事了
+**注意：用generate生产的代码最好不要改，因为下次重新生成的代码就会覆盖掉你写的代码，所以建议将自己写的代码重新放在别的文件中**
+## 2.4 mybatis plus
+很方便，有机会再用
 
+https://mp.baomidou.com/guide/
