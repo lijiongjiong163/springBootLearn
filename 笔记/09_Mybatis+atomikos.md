@@ -1,3 +1,4 @@
+**适用于 06_SB_MybatisJTA；**
 # Mybatis Plus + Atomikos
 ### 0.MybatisPlus使用
 https://mybatis.plus/guide/

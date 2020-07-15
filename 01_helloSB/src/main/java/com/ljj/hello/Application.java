@@ -4,8 +4,13 @@ import com.ljj.hello.domain.Person;
 import io.github.yedaxia.apidocs.Docs;
 import io.github.yedaxia.apidocs.DocsConfig;
 import io.github.yedaxia.apidocs.plugin.markdown.MarkdownDocPlugin;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @SpringBootApplication来标注一个主程序类，说明这是一个springBoot应用
@@ -18,6 +23,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
 
+
+
     public static void main(String[] args) {
         DocsConfig config = new DocsConfig();
         config.setProjectPath("D:\\Idea_workspace\\springBootLearn\\01_helloSB"); // 项目根目录
@@ -28,7 +35,8 @@ public class Application {
         config.addPlugin(new MarkdownDocPlugin());
         Docs.buildHtmlDocs(config); // 执行生成文档
         //springBoot应用启动
-        SpringApplication.run(Application.class, args);
+        Class<?>[] arr = {Application.class};
+        SpringApplication.run(arr, args);
     }
 
 }
