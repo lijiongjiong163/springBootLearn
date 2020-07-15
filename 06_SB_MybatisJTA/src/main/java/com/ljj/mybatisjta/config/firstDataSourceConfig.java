@@ -14,11 +14,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionManager;
 
 
 import javax.sql.DataSource;
+
+
 @Configuration
-//todo  @MapperScan的sqlSessionFactoryRef是干啥的
 @MapperScan(basePackages = "com.ljj.mybatisjta.test1db",sqlSessionFactoryRef = "firstSqlSessionFactory",sqlSessionTemplateRef = "firstSqlSessionTemplate")
 public class firstDataSourceConfig {
     //XA规范的数据源
@@ -39,11 +42,11 @@ public class firstDataSourceConfig {
         //sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/test1db/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
-//    @Bean
-//    @Primary
-//    public DataSourceTransactionManager firstDataSourceTransactionManager(@Qualifier("firstXADataSource")DataSource dataSource){
-//        return new DataSourceTransactionManager(dataSource);
-//    }
+    @Bean
+    @Primary
+    public TransactionManager firstDataSourceTransactionManager(@Qualifier("firstXADataSource")DataSource dataSource){
+        return new DataSourceTransactionManager(dataSource);
+    }
     @Bean
     @Primary
     public SqlSessionTemplate firstSqlSessionTemplate(@Qualifier("firstSqlSessionFactory") SqlSessionFactory sqlSessionFactory){

@@ -90,3 +90,13 @@ mybatis:
 很方便，有机会再用
 
 https://mp.baomidou.com/guide/
+## 2.5 针对@mapper的解释
+你会发现，Mapper层就是曾经的dao层，他两有什么区别呢：
+- 1.dao他是有具体实现的呀，mapper是个接口
+- 2.dao需要@Repository标签才能加入容器，而mapper不用，它用的是@mapper或@mapperScan
+
+所以来解释以下这几个标签
+
+- @Repository：和@Component一样，这些标签只能用在类上，接口就不能用
+- @mapper：会自动给这个接口生成一个实现并加入容器中
+- @MapperScan：指定要变成实现类的接口所在的包，然后包下面的所有接口在编译之后都会生成相应的实现类
