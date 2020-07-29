@@ -42,11 +42,11 @@ public class firstDataSourceConfig {
         //sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/test1db/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
-    @Bean
-    @Primary
-    public TransactionManager firstDataSourceTransactionManager(@Qualifier("firstXADataSource")DataSource dataSource){
-        return new DataSourceTransactionManager(dataSource);
-    }
+//    @Bean
+//    @Primary
+//    public TransactionManager firstDataSourceTransactionManager(@Qualifier("firstXADataSource")DataSource dataSource){
+//        return new DataSourceTransactionManager(dataSource);
+//    }
     @Bean
     @Primary
     public SqlSessionTemplate firstSqlSessionTemplate(@Qualifier("firstSqlSessionFactory") SqlSessionFactory sqlSessionFactory){
