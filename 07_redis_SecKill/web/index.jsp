@@ -24,8 +24,8 @@ $(function(){
 		var url=$("#msform").attr("action");
 	     $.post(url,$("#msform").serialize(),function(data){
      		if(data=="false"){
-    			alert("抢光了" );
-    			$("#miaosha_btn").attr("disabled",true);
+    			// alert("抢光了" );
+    			// $("#miaosha_btn").attr("disabled",true);
     		}
 		} );    
 	})

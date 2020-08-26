@@ -2,10 +2,10 @@ package com.atguigu.StatePattern;
 
 import redis.clients.jedis.Jedis;
 
-public class over implements State {
+public class again implements State {
     @Override
     public boolean choujiang(Jedis jedis) {
-        System.out.println("奖品没啦，抽奖结束");
+        System.out.println("孙子，你已经中过奖了");
         jedis.close();
         return false;
     }

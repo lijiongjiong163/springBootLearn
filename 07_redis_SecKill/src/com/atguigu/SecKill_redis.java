@@ -8,6 +8,7 @@ import java.util.Set;
 import com.atguigu.StatePattern.Context;
 import com.atguigu.StatePattern.notStart;
 import com.atguigu.StatePattern.over;
+import com.atguigu.StatePattern.start;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.slf4j.LoggerFactory;
 
@@ -44,9 +45,11 @@ public class SecKill_redis {
 
 		Jedis jedis = new Jedis("192.168.40.129",6379);
 		//由于多个情况，我们使用状态模式去优化一下它(其实这里并不适用。。。)
+		//设置监控,监控库存会不会被其它线程更改
+		jedis.watch(kcKey);
 		Context context = new Context();
 		//情况一:秒杀还未开始
-		if(){
+		if(!jedis.exists(kcKey)){	  //判断在redis中是否存在这个key
 			context.setState(new notStart());
 			return context.doAction(jedis);
 		}
@@ -57,8 +60,13 @@ public class SecKill_redis {
 			return context.doAction(jedis);
 		}
 		//情况三：秒杀成功
-
-		return false;
+		//抽奖过程
+			else if(Integer.parseInt(jedis.get(kcKey))<=0) {
+			context.setState(new over());
+			return context.doAction(jedis);
+		}
+		context.setState(new start(context,kcKey,userKey,uid));
+		return context.doAction(jedis);
 
 	}
 	

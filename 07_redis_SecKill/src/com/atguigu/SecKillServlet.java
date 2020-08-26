@@ -31,7 +31,7 @@ public class SecKillServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
  
-		String userid = new Random().nextInt(50000) +"" ; 
+		String userid = new Random().nextInt(1000) +"" ;
 
 		String prodid =request.getParameter("prodid");
 		
