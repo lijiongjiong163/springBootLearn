@@ -1,0 +1,3 @@
+ab -n 1000  -c 200  -p opt/postfile -T "application/x-www-form-urlencoded" 172.16.10.75:8080/07_redis_SecKill/doseckill
+
+ab -n 请求数  -c 并发数  -p 指定请求数据文件 -T "application/x-www-form-urlencoded" 要测试的请求地址
