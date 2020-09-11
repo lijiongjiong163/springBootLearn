@@ -1,3 +1,5 @@
+**适用于 08_SB_Servlet**
+
 ## 一、Servlet
 
 ### Servlet的四个作用域对象（一个不常用）
@@ -28,3 +30,14 @@
 - HttpSessionAttributeListener
 - ServletContextAttributeListener
 - ServletRequestAttributeListener
+
+要用上面这些Listener，自己写个实现类，实现上面的接口，并重写人家的方法就行了。
+
+## 三、过滤器
+
+- 在客户端发的请求访问后端资源之前，拦截这些请求
+- 在服务器的响应发送回客户端之前，处理这些响应
+
+![image-20200910174333010](assets/image-20200910174333010.png)
+
+通常用于对访问Ip的识别呀，加密请求的解密呀，敏感词检测呀什么的

@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/04_SB_Jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/05_SB_Mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/06_SB_MybatisJTA/pom.xml" />
+        <option value="$PROJECT_DIR$/08_SB_Servlet/pom.xml" />
       </list>
     </option>
   </component>

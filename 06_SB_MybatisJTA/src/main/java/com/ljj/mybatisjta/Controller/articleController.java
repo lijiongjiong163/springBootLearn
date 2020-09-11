@@ -5,9 +5,10 @@ import com.ljj.mybatisjta.Service.articleService;
 import com.ljj.mybatisjta.config.AjaxResponse;
 import com.ljj.mybatisjta.domain.ArticleVO;
 import com.ljj.mybatisjta.test1db.Article;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@Slf4j
 @RestController
 public class articleController {
     @Autowired
@@ -64,6 +65,7 @@ public class articleController {
     //查多条记录
     @GetMapping("/articles")
     public AjaxResponse findAll(){
+        log.info("查询所有书籍");
         return AjaxResponse.success(articleService.findAll());
     }
 }

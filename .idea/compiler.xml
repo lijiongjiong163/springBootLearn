@@ -11,6 +11,7 @@
         <module name="01_helloSB" />
         <module name="Annotation" />
         <module name="hello" />
+        <module name="08_SB_Servlet" />
         <module name="05_SB_Mybatis" />
         <module name="04_SB_Jdbc" />
         <module name="03_SB_web" />
@@ -26,6 +27,7 @@
       <module name="05_SB_Mybatis" target="1.8" />
       <module name="06_SB_MybatisJTA" target="1.8" />
       <module name="07_SB_redis" target="1.8" />
+      <module name="08_SB_Servlet" target="1.8" />
       <module name="Annotation" target="1.5" />
       <module name="hello" target="1.8" />
     </bytecodeTargetLevel>
@@ -39,6 +41,7 @@
       <module name="05_SB_Mybatis" options="-parameters" />
       <module name="06_SB_MybatisJTA" options="-parameters" />
       <module name="07_SB_redis" options="-parameters" />
+      <module name="08_SB_Servlet" options="-parameters" />
       <module name="hello" options="-parameters" />
     </option>
   </component>
