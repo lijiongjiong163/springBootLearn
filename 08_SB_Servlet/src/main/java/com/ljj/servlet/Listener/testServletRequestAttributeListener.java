@@ -15,17 +15,17 @@ import javax.servlet.annotation.WebListener;
 public class testServletRequestAttributeListener implements ServletRequestAttributeListener {
     @Override
     public void attributeAdded(ServletRequestAttributeEvent srae) {
-        log.info("--------------request添加属性");
+        log.warn("--------------request添加属性");
     }
 
     @Override
     public void attributeRemoved(ServletRequestAttributeEvent srae) {
-        log.info("--------------request删除属性");
+        log.warn("--------------request删除属性");
 
     }
 
     @Override
     public void attributeReplaced(ServletRequestAttributeEvent srae) {
-        log.info("--------------request修改属性");
+        log.warn("--------------request修改属性");
     }
 }

@@ -19,11 +19,11 @@ public class testSessionListener implements HttpSessionListener
     //Session对象初始化时的回调函数
     @Override
     public void sessionCreated(HttpSessionEvent se) {
-        log.info("++++++++++++++++++Session对象创建监听");
+        log.warn("++++++++++++++++++Session对象创建监听");
     }
     //Session对象销毁时的回调函数
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
-        log.info("++++++++++++++++++Session对象销毁监听");
+        log.warn("++++++++++++++++++Session对象销毁监听");
     }
 }

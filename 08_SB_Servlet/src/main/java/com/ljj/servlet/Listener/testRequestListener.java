@@ -15,11 +15,11 @@ import javax.servlet.annotation.WebListener;
 public class testRequestListener implements ServletRequestListener {
     @Override
     public void requestDestroyed(ServletRequestEvent sre) {
-        log.info("++++++++++++++++++Request对象销毁监听");
+        log.warn("++++++++++++++++++Request对象销毁监听");
     }
 
     @Override
     public void requestInitialized(ServletRequestEvent sre) {
-        log.info("++++++++++++++++++Request对象初始化监听");
+        log.warn("++++++++++++++++++Request对象初始化监听");
     }
 }

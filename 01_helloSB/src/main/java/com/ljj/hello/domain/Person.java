@@ -19,6 +19,7 @@ import java.util.Map;
  * @PropertySource  从指定文件中取值
  * @Validated jsr303校验
  *
+ * Ps:当同时使用@ConfigurationProperties和@PropertySource时，优先使用@ConfigurationProperties，当主配置文件中没有相关的属性的才从@PropertySource指定的文件中去读取这个属性
  */
 @Component
 @ConfigurationProperties(prefix = "person")

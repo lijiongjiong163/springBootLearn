@@ -16,10 +16,10 @@ public class testContextListener implements ServletContextListener
 {
     //Context对象初始化时的回调函数
     public void contextInitialized(ServletContextEvent sce) {
-        log.info("++++++++++++++++++context对象创建监听");
+        log.warn("++++++++++++++++++context对象创建监听");
     }
     //Context对象销毁时的回调函数
     public  void contextDestroyed(ServletContextEvent sce) {
-        log.info("++++++++++++++++++context对象销毁监听");
+        log.warn("++++++++++++++++++context对象销毁监听");
     }
 }
