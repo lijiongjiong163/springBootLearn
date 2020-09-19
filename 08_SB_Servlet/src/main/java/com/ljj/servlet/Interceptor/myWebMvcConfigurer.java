@@ -2,9 +2,11 @@ package com.ljj.servlet.Interceptor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
+
 public class myWebMvcConfigurer implements WebMvcConfigurer {
     @Autowired
     MyInterceptor1 myInterceptor1;

@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.Filter;
 
 /**
- * 将过滤器加入spring容器的第二种方法，麻烦点，但是可以自定义执行顺序
+ * 将三大组件加入spring容器的第二种方法，麻烦点，但是可以自定义执行顺序
  */
 @Configuration
-public class FilterRegistration {
+public class Registration {
     @Bean
     public FilterRegistrationBean filterRegistrationBean1() {
         FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<>();

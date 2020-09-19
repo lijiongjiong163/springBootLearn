@@ -66,6 +66,8 @@
 - 注册拦截器
 
 ```java
+//WebMvcConfigurer就是springBoot对springMVC配置的封装，你自己写的那些组件就可以用这个类去往springMVC中添加
+//@EnableWebMvc 加上这个标签就全面接管springMVC了，并不是指添加这些组件，而是只用这些组件。
 @Configuration
 public class myWebMvcConfigurer implements WebMvcConfigurer {
     @Autowired

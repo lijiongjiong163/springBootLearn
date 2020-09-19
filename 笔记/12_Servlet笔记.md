@@ -14,6 +14,10 @@
 这些对象都可以通过上图中的方法去操作其属性：
 
 ![image-20200910100204302](assets/image-20200910100204302.png)
+### Servlet三大组件
+- Servlet（不多说）
+- Listener
+- Filter
 
 ## 二、Servlet Listener（监听器）
 
@@ -21,9 +25,9 @@
 
 #### 1.监听三大域对象的创建与销毁
 
-- ServletContext Listener（用例：启动时可使用这个监听器往内存里加一些静态变量）
-- HttpSession Listener（用例：统计在线人数）
-- ServlertRequest Listener（用例：监听访问量）
+- 监听Application对象：ServletContext Listener（用例：启动时可使用这个监听器往内存里加一些静态变量）
+- 监听Session对象：HttpSession Listener（用例：统计在线人数）
+- 监听Request对象：ServlertRequest Listener（用例：监听访问量）
 
 #### 2.监听域对象内属性的变化
 
@@ -31,7 +35,15 @@
 - ServletContextAttributeListener
 - ServletRequestAttributeListener
 
-要用上面这些Listener，自己写个实现类，实现上面的接口，并重写人家的方法就行了。
+#### 3.Listener使用方法
+
+- 要用上面这些Listener，自己写个实现类，实现上面的接口，并重写人家的方法就行了，记得要注册。
+
+#### 4.Listener注册方法
+
+- 使用@WebListener注解（方便，推荐）
+- ServletListenerFilterRegistrationBean（SpringBoot给Servlet三大组件都提供了相对应的RegistrationBean）
+- web.xml中配置（老web项目）
 
 ## 三、过滤器
 
@@ -46,7 +58,9 @@
 
 ![FireShot Capture 015 - Filter、FilterChain、FilterConfig 介绍 - 菜鸟教程 - www.runoob.com](assets/FireShot Capture 015 - Filter、FilterChain、FilterConfig 介绍 - 菜鸟教程 - www.runoob.com.png)
 
-#### 2.具体例子如下：
+#### 2.具体使用例子如下：
+
+​	写个Filter实现类就行了，记得要注册。
 
 ```java
 package com.ljj.servlet.Filter;
