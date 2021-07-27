@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/webjars/jquery/3.5.1/dist/jquery.js "></script>
+    <script type="text/javascript">
+        //js传统做法
+        //1.onclick 必须在onload方法中（因为要等页面完全加载完才能拿到button的id）
+        // window.onload = function () {
+        //     //2.获取按钮对象
+        //     var btnObj = document.getElementById("btnid");
+        //
+        //     //3.给onclick方法写内容
+        //     btnObj[0].onclick = function () {
+        //         alert("hello");
+        //     }
+        // }
+
+        //1.onclick 必须在onload方法中
+        $(function () {     //表示页面加载完成之后，相当于window.onload = function (){}
+            //2.获取按钮对象
+            var $btnObj = $("#btnid");       //$("#btnid")就等于document.getElementById("btnid")，var $btnObj只是命名习惯，在jquery对象前加$,其实你爱叫啥叫啥
+            //3.给onclick方法写内容
+            $btnObj.click(function () {
+                alert("JQuery.hello");
+            });
+            $("<div>\n" +
+                "        <span>span1</span>\n" +
+                "        <span>span2</span>\n" +
+                "    </div>").appendTo("body");
+        });
+    </script>
+</head>
+<body>
+    <button id = "btnid" name="haha">Say Hello!</button>
+
+</body>
+</html>

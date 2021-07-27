@@ -135,3 +135,30 @@ id|int|是|
   "data": {}
 }
 ```
+# 学习js时写的测试类
+## test
+
+**
+
+**请求URL**
+
+/test/{id} `GET` 
+
+**返回结果**
+
+```json
+string{}
+```
+## test2
+
+**
+
+**请求URL**
+
+/test2/{id} `GET` 
+
+**返回结果**
+
+```json
+string{}
+```

@@ -1,5 +1,6 @@
 package com.ljj.hello;
 
+import com.ljj.hello.domain.Article;
 import com.ljj.hello.domain.Person;
 import io.github.yedaxia.apidocs.Docs;
 import io.github.yedaxia.apidocs.DocsConfig;
@@ -7,6 +8,7 @@ import io.github.yedaxia.apidocs.plugin.markdown.MarkdownDocPlugin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -36,7 +38,14 @@ public class Application {
         Docs.buildHtmlDocs(config); // 执行生成文档
         //springBoot应用启动
         Class<?>[] arr = {Application.class};
-        SpringApplication.run(arr, args);
+        ConfigurableApplicationContext run =SpringApplication.run(arr, args);
+        String[] beanDefinitionNames = run.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println(beanDefinitionName);
+        }
+        System.out.println(run.getBean("person",Person.class));
+        System.out.println(run.getBean("article1", Article.class));
+
     }
 
 }

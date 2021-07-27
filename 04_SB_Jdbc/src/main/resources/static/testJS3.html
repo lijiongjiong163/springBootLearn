@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onsubmitFun() {
+            alert("准备提交");
+           // return false;
+        }
+        window.onload = function () {
+            var form3=document.getElementById("form3");
+            form3.onsubmit = function () {
+                alert("动态注册准备提交");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<!--要想阻止提交，需要onsubmit="return false;"-->
+<form action="http://localhost:8080" onsubmit="return false;">
+    <input type="submit" value="第一种静态注册">
+</form>
+<!--在函数中判断是否符合提交条件，不符合则return false，false被return到onsubmit属性中，相当于 onsubmit="false" ,少了return，所以必须在调用时函数名前加上return-->
+<form action="http://localhost:8080" onsubmit="return onsubmitFun()">
+    <input type="submit" value="第二种静态注册">
+</form>
+<form id = "form3" action="http://localhost:8080" >
+    <input type="submit" value="动态注册">
+</form>
+</body>
+</html>

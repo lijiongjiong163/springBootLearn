@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var arr=[];
+        function f1() {
+            alert("无参方法");
+        }
+        function f2(a,b) {
+            alert("有参方法：a="+a+";b="+b);
+        }
+        function f3(a,b) {
+            return a+b;
+        }
+        f1();
+        f2(123,"aab");
+        alert(f3(100,50));
+
+        //创建一个对象；
+        var star = new Object();
+        star.name = "杰伦";
+        star.action = function () {
+            alert(this.name+"喝奶茶");
+        }
+        star.action();//对象方法的调用
+        //创建对象方法二
+        var star2 = {
+            name:"林俊杰",
+            action:function () {
+                alert(this.name+"打游戏")
+            }
+        }
+        star2.action();//对象方法的调用
+    </script>
+</head>
+<body>
+        <span>这是一个span+
+        </span>
+</body>
+</html>

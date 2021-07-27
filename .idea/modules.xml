@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/06_SB_MybatisJTA/06_SB_MybatisJTA.iml" filepath="$PROJECT_DIR$/06_SB_MybatisJTA/06_SB_MybatisJTA.iml" />
       <module fileurl="file://$PROJECT_DIR$/07_redis_SecKill/07_redis_SecKill.iml" filepath="$PROJECT_DIR$/07_redis_SecKill/07_redis_SecKill.iml" />
       <module fileurl="file://$PROJECT_DIR$/08_SB_Servlet/08_SB_Servlet.iml" filepath="$PROJECT_DIR$/08_SB_Servlet/08_SB_Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_redis_template/09_redis_template.iml" filepath="$PROJECT_DIR$/09_redis_template/09_redis_template.iml" />
       <module fileurl="file://$PROJECT_DIR$/Annotation/Annotation.iml" filepath="$PROJECT_DIR$/Annotation/Annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/01_helloSB/hello.iml" filepath="$PROJECT_DIR$/01_helloSB/hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/笔记/笔记.iml" filepath="$PROJECT_DIR$/笔记/笔记.iml" />

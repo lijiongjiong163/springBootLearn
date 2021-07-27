@@ -2,6 +2,8 @@
 
 ## 一、Servlet
 
+Servlet是运行在服务器上得一个java小程序，它可以接收客户端发送过来的请求，并响应数据给客户端
+
 ### Servlet的四个作用域对象（一个不常用）
 
 1. ServletContext（应用级别，一整个应用就一个这个对象）
@@ -14,10 +16,73 @@
 这些对象都可以通过上图中的方法去操作其属性：
 
 ![image-20200910100204302](assets/image-20200910100204302.png)
+### ServletContext
+
+1. Servlet是一个接口，它表示Servlet上下文对象
+2. 一个web工程，只有一个Servlet Context实例
+3. Servlet对象是一个域对象
+4. Servlet Context是在web工程部署启动的时候创建的。
+
+什么是域对象？
+
+域对象，是可以像Map一样存取数据的对象，叫域对象。这里的域指的是存取数据的操作范围。
+
+|        | 存数据         | 取数据         | 删除数据          |
+| ------ | -------------- | -------------- | ----------------- |
+| Map    | put()          | get()          | remove()          |
+| 域对象 | setAttribute() | getAttribute() | removeAttribute() |
+
+### ServletContext作用
+
+1. 获取上下文参数（web.xml中写的&lt;context-param&gt;标签中的数据）
+2. 获取当前的工程路径。（.getContextPath()方法）
+3. 获取工程部署后在服务器硬盘上的绝对路径。（.getRealPath()方法）
+4. 可以像map一样存取数据
+
 ### Servlet三大组件
-- Servlet（不多说）
+
+- Servlet
 - Listener
 - Filter
+
+### Servlet程序创建
+
+1. Servlet就是个接口，谁实现它谁就是Servlet程序。
+
+2. 实现Servlet接口的Service方法，里面写你的程序就行了。但是，一般开发都是通过继承HttpServlet来实现的，用重写doGet和doPost来实现业务代码。
+3. 在web.xml中配置Servlet。
+
+### 地址如何找到Servlet程序
+
+![image-20201210154213081](assets/image-20201210154213081.png)
+
+### 重定向本质
+
+假定浏览器第一次请求一个Servlet，被这个Servlet重定向到第二个Servlet，那么，第一个Servlet响应的时候要做的事情分为两步：
+
+1.响应状态设置为302。（302就是重定向）
+
+2.响应头中的Location设置为新地址。
+
+
+
+虽然spring把它封装起来了，但是本质就是这两步。
+
+写一下Servlet1的实现代码：
+
+```java
+//方法一 
+resp.setStatus(302);
+resp.setHeader("Location","http://www.baidu.com");
+//方法二
+resp.sendRedirect("http://www.baidu.com");
+```
+
+下方是流程图
+
+![image-20201224112050076](assets/image-20201224112050076.png)
+
+
 
 ## 二、Servlet Listener（监听器）
 

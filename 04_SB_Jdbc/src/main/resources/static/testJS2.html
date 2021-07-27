@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onloadFun() {
+            alert("静态注册onload事件");
+        }
+        function onclickFun(){
+            alert("静态注册onclick事件");
+        }
+        window.onload = function () {
+            alert("动态态注册onload事件是固定写法");
+
+            var btn2 = document.getElementById("btn2");
+            btn2.onclick = function () {
+                alert("动态态注册onclick事件");
+            }
+
+        }
+    </script>
+</head>
+
+<body onload="onloadFun();">
+<span>这是第二个span
+        </span>
+<button onclick="onclickFun()">按钮1</button>
+<button id="btn2">按钮2</button>
+
+</body>
+</html>
